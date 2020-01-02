@@ -30,12 +30,12 @@ begin
   #10 rst_n = 1'b1;
   //------------
   op_sub = 0; // add
-  test_file = $fopen("test_file_add.txt", "r");  // открываем файл
+  test_file = $fopen("./TestBench/test_file_add.txt", "r");  // открываем файл
   i = 0;
   test(test_file);
   $fclose(test_file);
   op_sub = 1; // sub
-  test_file = $fopen("test_file_sub.txt", "r");  // открываем файл
+  test_file = $fopen("./TestBench/test_file_sub.txt", "r");  // открываем файл
   test(test_file);
   $fclose(test_file);
   #100 $stop; 
